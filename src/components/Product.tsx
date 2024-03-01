@@ -54,6 +54,6 @@ function areProductsEqual(
     }) && prevInCart === nextInCart
   );
 }
-const MemoizedProduct = memo<typeof Product>(Product);
+const MemoizedProduct = memo<typeof Product>(Product, areProductsEqual);
 
 export default MemoizedProduct;
